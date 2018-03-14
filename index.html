@@ -1,9 +1,69 @@
-<doctype HTML>
 <html>
   <head>
-    <title>我的标题</title>
+    <title>叶春森的个人空间</title>
+    <meta charset="utf-8">
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery-3.3.1.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/my.css">
+    <script src="js/vue.js"></script>
   </head>
-  <body>
-    <h1>第一个标题</h1>
+  <body class="bg-primary">
+    <div class="container">
+        <div class="jumbotron ">
+            <img src="img/myhead.jpg" class="img-circle" width="150px" height="150px" id="myimg" title="点击头像变化大小" >
+            <br>
+            <br>
+            <h3 id="c1">姓名</h3>
+            <span id="name" hidden="hidden">叶春森</span><br>
+            <br>
+            <h3 id="c2">专业</h3>
+            <span id="zy" hidden="hidden">计算机科学与技术</span><br>
+            <br>
+            <h3 id="c3">学校</h3>
+            <span id="school" hidden="hidden">广东金融学院（13级本科）</span><br>
+            <br>
+            <h3 id="c4">技能</h3>
+            <span id="gi" hidden="hidden">js、HTML、CSS、jQuery、bootstrap、vue、ajax</span><br>
+            <br>
+        </div>
+    </div>
+    <script>
+     $(document).ready(function () {
+         var flag=true;
+        $('#myimg').click(function () {
+            if(flag){
+                $('#myimg').animate({
+                    width:'+=100px',
+                    height:'+=100px'
+                })
+                flag=!flag;
+            }else{
+                $('#myimg').animate({
+                    width:'-=100px',
+                    height:'-=100px'
+                })
+                flag=!flag;
+            }
+        })
+        // $('#c1').click(function () {
+             $('#c1').hide(4000);
+             $('#name').show(2000);
+        // })
+        // $('#c2').click(function () {
+             $('#c2').hide(4000);
+             $('#zy').show(2000);
+         //})
+         //$('#c3').click(function () {
+             $('#c3').hide(4000);
+             $('#school').show(2000);
+         //})
+         //$('#c4').click(function () {
+             $('#c4').hide(4000);
+             $('#gi').show(2000);
+        // })
+     })
+    </script>
+
   </body>
 </html>
